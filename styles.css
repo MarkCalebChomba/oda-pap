@@ -17,6 +17,9 @@ header {
     align-items: center;
     padding: 10px 20px;
 }
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 
 .border-line {
     border-bottom: 1px solid #ddd;
