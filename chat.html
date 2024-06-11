@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - Oda Pap</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script defer src="scripts/scripts.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Oda Pap Logo" class="logo">
+                <span class="logo-text">Oda Pap</span>
+            </div>
+            <div class="top-icons">
+                <button class="home-button" onclick="location.href='index.html'">Home</button>
+                <i class="fas fa-search" id="search-icon"></i>
+                <i class="fas fa-ellipsis-v" id="menu-icon"></i>
+            </div>
+        </div>
+        <div class="border-line"></div>
+        <div class="nav-bar" id="nav-bar">
+            <button class="home-button" onclick="location.href='index.html'"><i class="fas fa-home"></i></button>
+            <button class="home-button" onclick="location.href='electronics.html'"><i class="fas fa-laptop"></i></button>
+            <button class="home-button" onclick="location.href='fashion.html'"><i class="fas fa-tshirt"></i></button>
+            <button class="home-button" onclick="location.href='furniture.html'"><i class="fas fa-couch"></i></button>
+            <button class="home-button" onclick="location.href='notification.html'"> <i class="fas fa-bell" id="notification-icon"></i></button>
+            <button class="home-button" onclick="location.href='index.html'"><i class="fas fa-shopping-cart" id="cart-icon"></i></button>
+            <button class="home-button" onclick="location.href='index.html'"><i class="fas fa-user-circle"></i></button>
+           <!-- -->
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="images/profile1.png" alt="User Profile" class="chat-profile-pic">
+                <span class="chat-username">John Doe</span>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message received">
+                    <p>Hi there! How can I help you?</p>
+                    <span class="message-time">10:30 AM</span>
+                </div>
+                <div class="message sent">
+                    <p>I'm interested in the laptop you're selling.</p>
+                    <span class="message-time">10:32 AM</span>
+                </div>
+                <!-- More messages -->
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Type a message" class="chat-input" id="chat-input">
+                <button class="chat-send" id="chat-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Oda Pap. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

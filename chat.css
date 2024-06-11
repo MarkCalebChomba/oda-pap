@@ -28,9 +28,10 @@ header {
 }
 
 .logo-text {
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 2em; /* Increased font size */
+    font-weight: bold; /* Make the text bold */
     margin-left: 10px;
+    color: #333;
 }
 
 .home-button {
@@ -73,91 +74,103 @@ main {
     padding: 20px;
 }
 
-.highlights {
+.chat-container {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.highlight-item {
-    text-align: center;
-}
-
-.highlight-item i {
-    font-size: 30px;
-    color: #ff5722;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product-item {
-    width: calc(33.333% - 20px);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
+    flex-direction: column;
+    height: calc(100vh - 200px);
     background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    overflow: hidden;
 }
 
-.product-item:hover {
-    transform: scale(1.02);
-}
-
-.product-item .profile {
+.chat-header {
     display: flex;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    background-color: #075e54;
+    color: #fff;
 }
 
-.product-item .profile img {
-    width: 50px;
-    height: 50px;
+.chat-profile-pic {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     margin-right: 10px;
 }
 
-.product-item .profile p {
+.chat-username {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #e5ddd5;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.message p {
     margin: 0;
 }
 
-.product-item .profile p strong {
-    display: block;
+.message-time {
+    align-self: flex-end;
+    font-size: 0.8em;
+    color: #777;
 }
 
-.product-item .product-price {
-    padding: 10px;
-    font-size: 1.2em;
-    color: #ff5722;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+.received {
+    align-self: flex-start;
+    background-color: #fff;
+    border-radius: 10px 10px 10px 0;
 }
 
-.product-item img {
-    width: 100%;
-    height: auto;
+.sent {
+    align-self: flex-end;
+    background-color: #dcf8c6;
+    border-radius: 10px 10px 0 10px;
 }
 
-.product-actions {
+.chat-footer {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
     padding: 10px;
+    background-color: #fff;
     border-top: 1px solid #ddd;
 }
 
-.product-actions div {
-    text-align: center;
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    margin-right: 10px;
 }
 
-.product-actions i {
-    font-size: 20px;
+.chat-send {
+    background-color: #075e54;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
     cursor: pointer;
-    color: #ff5722;
+}
+
+.chat-send:hover {
+    background-color: #064e48;
 }
 
 footer {
@@ -168,12 +181,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .product-item {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
     .top-bar {
         flex-direction: row;
         justify-content: space-between;
@@ -188,15 +195,7 @@ footer {
         flex-wrap: wrap;
     }
 
-    .product-item {
-        width: 100%;
+    .chat-body {
+        padding: 5px;
     }
-}
-.product-item .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
 }
