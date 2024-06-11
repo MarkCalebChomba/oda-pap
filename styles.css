@@ -57,21 +57,6 @@ header {
     cursor: pointer;
 }
 
-
-.border-line {
-    border-bottom: 1px solid #ddd;
-}
-
-.logo {
-    height: 30px;
-}
-
-.top-icons i {
-    font-size: 20px;
-    margin-left: 15px;
-    cursor: pointer;
-}
-
 .nav-bar {
     display: flex;
     justify-content: space-around;
