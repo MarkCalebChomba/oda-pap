@@ -18,36 +18,8 @@ header {
     padding: 10px 20px;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 30px;
-}
-
-.logo-text {
-    font-size: 2em; /* Increased font size */
-    font-weight: bold; /* Make the text bold */
-    margin-left: 10px;
-    color: #333;
-}
-
-.home-button {
-    background-color: #ff5722;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-
-
 .border-line {
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .logo {
