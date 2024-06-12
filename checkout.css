@@ -8,9 +8,7 @@ body {
 
 header {
     background-color: #fff;
-    border-bottom: 
-
-1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 
 .top-bar {
@@ -77,102 +75,85 @@ main {
 }
 
 .checkout {
-    max-width: 1200px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .checkout h2 {
-    text-align: center;
     margin-bottom: 20px;
 }
 
-.checkout-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.checkout-left, .checkout-right {
-    width: 48%;
-}
-
-.shipping-form, .billing-form {
+.checkout-form .form-group {
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.shipping-form h3, .billing-form h3 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.shipping-form label, .billing-form label {
+.checkout-form label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    font-weight: bold;
 }
 
-.shipping-form input, .billing-form input {
+.checkout-form input, .checkout-form select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1em;
 }
 
-.checkout-right h3 {
-    margin-bottom: 20px;
-    color: #333;
+.payment-options {
+    margin-top: 20px;
+    text-align: left;
 }
 
-.order-item {
+.payment-options h3 {
+    margin-bottom: 10px;
+}
+
+.payment-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 10px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
 }
 
-.order-product-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-
-.order-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.order-details .product-name {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.order-details .product-price, .order-details .product-quantity {
-    color: #888;
-}
-
-.order-total {
-    margin-bottom: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.place-order-btn {
-    width: 100%;
-    background-color: #ff5722;
+.mpesa-button {
+    background-color: #4caf50;
     color: #fff;
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
 }
 
-.place-order-btn:hover {
-    background-color: #e64a19;
+.mpesa-button:hover {
+    background-color: #45a049;
+}
+
+.card-button {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+.card-button:hover {
+    background-color: #1e88e5;
+}
+
+.other-button {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.other-button:hover {
+    background-color: #fb8c00;
 }
 
 footer {
@@ -197,16 +178,7 @@ footer {
         flex-wrap: wrap;
     }
 
-    .checkout-container {
-        flex-direction: column;
-    }
-
-    .checkout-left, .checkout-right {
+    .checkout-form .form-group input, .checkout-form .form-group select {
         width: 100%;
-    }
-
-    .order-product-image {
-        width: 80px;
-        height: 80px;
     }
 }

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Oda Pap</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script defer src="scripts/scripts.js"></script>
+    <script defer src="checkout.js"></script>
 </head>
 <body>
     <header>
@@ -23,79 +23,67 @@
         </div>
         <div class="border-line"></div>
         <div class="nav-bar" id="nav-bar">
-            <i class="fas fa-home" onclick="location.href='index.html'"></i>
-            <i class="fas fa-laptop" onclick="location.href='electronics.html'"></i>
-            <i class="fas fa-tshirt" onclick="location.href='fashion.html'"></i>
-            <i class="fas fa-couch" onclick="location.href='furniture.html'"></i>
-            <i class="fas fa-bell" onclick="location.href='notifications.html'" id="notification-icon"></i>
-            <i class="fas fa-shopping-cart" onclick="location.href='cart.html'" id="cart-icon"></i>
-            <i class="fas fa-user-circle"></i>
+            <button class="home-button" onclick="location.href='index.html'"><i class="fas fa-home"></i></button>
+            <button class="home-button" onclick="location.href='electronics.html'"><i class="fas fa-laptop"></i></button>
+            <button class="home-button" onclick="location.href='fashion.html'"><i class="fas fa-tshirt"></i></button>
+            <button class="home-button" onclick="location.href='furniture.html'"><i class="fas fa-couch"></i></button>
+            <button class="home-button" onclick="location.href='notification.html'"> <i class="fas fa-bell" id="notification-icon"></i></button>
+            <button class="home-button" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart" id="cart-icon"></i></button>
+            <button class="home-button" onclick="location.href='profile.html'"><i class="fas fa-user-circle"></i></button>
+           <!-- -->
+            
         </div>
     </header>
 
     <main>
         <section class="checkout">
             <h2>Checkout</h2>
-            <div class="checkout-container">
-                <div class="checkout-left">
-                    <form class="shipping-form">
-                        <h3>Shipping Details</h3>
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address" required>
-
-                        <label for="city">City</label>
-                        <input type="text" id="city" name="city" required>
-
-                        <label for="state">State</label>
-                        <input type="text" id="state" name="state" required>
-
-                        <label for="zip">Zip Code</label>
-                        <input type="text" id="zip" name="zip" required>
-
-                        <label for="country">Country</label>
-                        <input type="text" id="country" name="country" required>
-                    </form>
-
-                    <form class="billing-form">
-                        <h3>Billing Information</h3>
-                        <label for="card-name">Name on Card</label>
-                        <input type="text" id="card-name" name="card-name" required>
-
-                        <label for="card-number">Card Number</label>
-                        <input type="text" id="card-number" name="card-number" required>
-
-                        <label for="exp-month">Expiration Month</label>
-                        <input type="text" id="exp-month" name="exp-month" required>
-
-                        <label for="exp-year">Expiration Year</label>
-                        <input type="text" id="exp-year" name="exp-year" required>
-
-                        <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" name="cvv" required>
-                    </form>
+            <form class="checkout-form">
+                <div class="form-group">
+                    <label for="shipping-country">Country</label>
+                    <select id="shipping-country" name="country">
+                        <option value="kenya">Kenya</option>
+                        <option value="uganda">Uganda</option>
+                        <option value="tanzania">Tanzania</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-state">State</label>
+                    <select id="shipping-state" name="state">
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                        <!-- Add more states as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-city">City</label>
+                    <select id="shipping-city" name="city">
+                        <option value="westlands">Westlands</option>
+                        <option value="karen">Karen</option>
+                        <option value="langata">Langata</option>
+                        <!-- Add more cities as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-address">Address</label>
+                    <input type="text" id="shipping-address" name="address" placeholder="Enter your address">
                 </div>
 
-                <div class="checkout-right">
-                    <h3>Order Summary</h3>
-                    <div class="order-item">
-                        <img src="images/product1.jpg" alt="Product Image" class="order-product-image">
-                        <div class="order-details">
-                            <p class="product-name">Product Name</p>
-                            <p class="product-price">$100.00</p>
-                            <p class="product-quantity">Quantity: 1</p>
-                        </div>
-                    </div>
-                    <!-- Repeat order-item for more products -->
-
-                    <div class="order-total">
-                        <p>Total: $100.00</p>
-                    </div>
-                    <button class="place-order-btn">Place Order</button>
+                <div class="payment-options">
+                    <h3>Payment Options</h3>
+                    <button type="button" class="payment-button mpesa-button">
+                        <i class="fas fa-mobile-alt"></i> Pay with M-Pesa
+                    </button>
+                    <button type="button" class="payment-button card-button">
+                        <i class="fas fa-credit-card"></i> Pay with Card
+                    </button>
+                    <button type="button" class="payment-button other-button">
+                        <i class="fas fa-money-check-alt"></i> Other Payment Options
+                    </button>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
 
