@@ -18,7 +18,73 @@
             <div class="top-icons">
                 <button class="home-button" onclick="location.href='index.html'">Home</button>
                 <i class="fas fa-search" id="search-icon"></i>
-                <i class="fas fa-ellipsis-v" id="menu-icon"></i>
+                <div class="menu">
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <i class="fas fa-bars"></i>
+                        <p>Menu</p>
+                    </div>
+                    <div class="dropdown-content" id="dropdown">
+                        <a href="student-centre.html" class="category">
+                            <i class="fas fa-graduation-cap"></i>
+                            <p>Student Centre</p>
+                        </a>
+                        <a href="electronics.html" class="category">
+                            <i class="fas fa-tv"></i>
+                            <p>Electronics</p>
+                        </a>
+                        <a href="kitchenware.html" class="category">
+                            <i class="fas fa-blender"></i>
+                            <p>Kitchenware</p>
+                        </a>
+                        <a href="furniture.html" class="category">
+                            <i class="fas fa-couch"></i>
+                            <p>Furniture</p>
+                        </a>
+                        <a href="fashion.html" class="category">
+                            <i class="fas fa-tshirt"></i>
+                            <p>Fashion</p>
+                        </a>
+                        <a href="beauty.html" class="category">
+                            <i class="fas fa-heart"></i>
+                            <p>Beauty</p>
+                        </a>
+                        <a href="rentals.html" class="category">
+                            <i class="fas fa-building"></i>
+                            <p>Rentals</p>
+                        </a>
+                        <a href="service-men.html" class="category">
+                            <i class="fas fa-tools"></i>
+                            <p>Service Men</p>
+                        </a>
+                        <a href="foodstuffs.html" class="category">
+                            <i class="fas fa-carrot"></i>
+                            <p>Foodstuffs</p>
+                        </a>
+                        <a href="phones.html" class="category">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Phones</p>
+                        </a>
+                        <a href="accessories.html" class="category">
+                            <i class="fas fa-headphones"></i>
+                            <p>Accessories</p>
+                        </a>
+                        <a href="pharmaceutical.html" class="category">
+                            <i class="fas fa-pills"></i>
+                            <p>Pharmaceutical</p>
+                        </a>
+                        <a href="kids.html" class="category">
+                            <i class="fas fa-hat-wizard"></i>
+                            <p>kids</p>
+                        </a>
+                    </div>
+                </div>
+            
+                <script>
+                    function toggleMenu() {
+                        var dropdown = document.getElementById('dropdown');
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                </script>
             </div>
         </div>
         <div class="border-line"></div>
@@ -36,6 +102,7 @@
     </header>
 
     <main>
+        
         <section class="highlights">
             <div class="highlight-item">
                 <i class="fas fa-gift"></i>
@@ -62,53 +129,60 @@
                 <p>Most Liked</p>
             </div>
         </section>
-        
+        <div class="categories-box">
+            <a href="student-centre.html" class="category">
+                <i class="fas fa-graduation-cap"></i>
+                <p>Comrade Corner</p>
+            </a>
+            <a href="electronics.html" class="category">
+                <i class="fas fa-tv"></i>
+                <p>Electronics</p>
+            </a>
+            <a href="kitchenware.html" class="category">
+                <i class="fas fa-blender"></i>
+                <p>Kitchenware</p>
+            </a>
+            <a href="furniture.html" class="category">
+                <i class="fas fa-couch"></i>
+                <p>Furniture</p>
+            </a>
+            <a href="fashion.html" class="category">
+                <i class="fas fa-tshirt"></i>
+                <p>Fashion</p>
+            </a>
+            <a href="beauty.html" class="category">
+                <i class="fas fa-heart"></i>
+                <p>Beauty</p>
+            </a>
+            <a href="rentals.html" class="category">
+                <i class="fas fa-building"></i>
+                <p>Rentals</p>
+            </a>
+            <a href="service-men.html" class="category">
+                <i class="fas fa-tools"></i>
+                <p>Service Men</p>
+            </a>
+            <a href="foodstuffs.html" class="category">
+                <i class="fas fa-carrot"></i>
+                <p>Foodstuffs</p>
+            </a>
+            <a href="phones.html" class="category">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Phones</p>
+            </a>
+            <a href="accessories.html" class="category">
+                <i class="fas fa-headphones"></i>
+                <p>Accessories</p>
+            </a>
+            <a href="pharmaceutical.html" class="category">
+                <i class="fas fa-pills"></i>
+                <p>Pharmaceutical</p>
+            </a>
+        </div>
       
 
         
-        <section class="gallery">
-            <div class="product-item">
-                <div class="profile">
-                    <img src="images/profile1.png" alt="User Profile">
-                    <div>
-                        <p><strong>Ezra Fred</strong></p>
-                        <p>furniture set 4</p>
-                    </div>
-                </div>
-                <div class="product-image-container">
-                    <img src="images/furniture4.jpg" alt="Product Image" class="product-image" onclick="toggleDropdown(this)">
-                    <div class="image-dropdown">
-                        <div class="image-navigation">
-                            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
-                            <img id="galleryImage" src="images/furniture4.jpg" alt="Gallery Image">
-                            <button class="next" onclick="changeImage(1)">&#10095;</button>
-                        </div>
-                        <div id="description" class="description">
-                            <p>Description for furniture set 4.</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="product-price"><strong>KES 10,709</strong></p>
-                <div class="product-actions">
-                    <div class="product-actions-button">
-                        <button class="fas fa-cart-plus" onclick="addToCart()"></button>
-                        <p>Cart</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-bolt" onclick="buyNow()"></i>
-                        <p>Buy Now</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-heart" onclick="addToWishlist()"></i>
-                        <p>Wishlist</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <script src="scripts/index.js"></script>
-            </div>
+        
             <div class="product-item">
                 <div class="profile">
                     <img src="images/profile1.png" alt="User Profile">
@@ -268,6 +342,18 @@
             <!-- Repeat product-item for more products -->
         </section>
     </main>
+    <footer>
+        <div class="footer-content">
+            <h3>Follow Us</h3>
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.pinterest.com/yourprofile" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 
     <footer>
         <p>&copy; 2024 Oda Pap. All Rights Reserved.</p>
