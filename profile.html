@@ -5,23 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Oda Pap</title>
     <link rel="stylesheet" href="profile .css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script defer src="profile.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <div class="logo-container">
-                <img src="images/logo.png" alt="Oda Pap Logo" class="logo">
-                <span class="logo-text">Oda Pap</span>
-            </div>
-            <div class="top-icons">
-                <button class="home-button" onclick="location.href='index.html'">Home</button>
-                <i class="fas fa-search" id="search-icon"></i>
-                <i class="fas fa-ellipsis-v" id="menu-icon"></i>
-            </div>
-        </div>
-        <div class="border-line"></div>
+        <h1>Profile</h1>
         <div class="nav-bar" id="nav-bar">
             <button class="home-button" onclick="location.href='index.html'"><i class="fas fa-home"></i></button>
             <button class="home-button" onclick="location.href='electronics.html'"><i class="fas fa-laptop"></i></button>
@@ -34,55 +22,47 @@
             
         </div>
     </header>
-
     <main>
-        <section class="profile">
-            <h2>My Account</h2>
-            <div class="profile-container">
-                <div class="profile-header">
-                    <img src="images/profile1.png" alt="User Profile Picture" class="profile-pic">
-                    <div class="profile-details">
-                        <h3 class="account-name">John Doe</h3>
-                    </div>
-                </div>
-                <button class="account-button">
-                    <i class="fas fa-user-circle"></i> Account
-                </button>
-                <button class="location-button">
-                    <i class="fas fa-map-marker-alt"></i> Location
-                </button>
-                <div class="balance-container">
-                    <span>Account Balance:</span>
-                    <span class="balance-amount">$<span id="balance-amount">1234.56</span></span>
-                    <button class="eye-icon" id="toggle-balance">
-                        <i class="fas fa-eye"></i>
-                    </button>
-                </div>
-                <div class="transaction-buttons">
-                    <button class="deposit-button">Deposit</button>
-                    <button class="withdraw-button">Withdraw</button>
-                </div>
-                <button class="customer-care-button">
-                    <i class="fas fa-headphones"></i> Customer Care
-                </button>
-                <button class="cart-button">
-                    <i class="fas fa-shopping-cart"></i> Cart
-                </button>
-                <button class="account-details-button">
-                    <i class="fas fa-user"></i> Account Details
-                </button>
-                <button class="recently-viewed-button">
-                    <i class="fas fa-history"></i> Recently Viewed
-                </button>
-                <button class="address-book-button">
-                    <i class="fas fa-address-book"></i> Address Book
-                </button>
-            </div>
+        <section class="profile-section">
+            <img src="images/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>John Doe</h2>
+            <button class="account-btn">Account</button>
+        </section>
+        <section class="account-info">
+            <a href="deposit.html" class="account-option">
+                <i class="fas fa-money-check-alt"></i>
+                <span>Deposit</span>
+            </a>
+            <a href="withdraw.html" class="account-option">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Withdraw</span>
+            </a>
+            <a href="customer_care.html" class="account-option">
+                <i class="fas fa-headset"></i>
+                <span>Customer Care</span>
+            </a>
+            <a href="cart.html" class="account-option">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+            <a href="account_details.html" class="account-option">
+                <i class="fas fa-user-circle"></i>
+                <span>Account Details</span>
+            </a>
+            <a href="recently_viewed.html" class="account-option">
+                <i class="fas fa-history"></i>
+                <span>Recently Viewed</span>
+            </a>
+            <a href="address_book.html" class="account-option">
+                <i class="fas fa-address-book"></i>
+                <span>Address Book</span>
+            </a>
+        </section>
+        <section class="account-balance">
+            <h3>Account Balance</h3>
+            <p>$<span id="account-balance">1000.00</span></p>
+            <button id="toggle-balance"><i class="fas fa-eye"></i></button>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Oda Pap. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>

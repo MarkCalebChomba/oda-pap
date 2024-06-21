@@ -63,6 +63,8 @@
             </div>
         </section>
         
+      
+
         
         <section class="gallery">
             <div class="product-item">
@@ -73,30 +75,46 @@
                         <p>furniture set 4</p>
                     </div>
                 </div>
-               
-                <img src="images/furniture4.jpg" alt="Product Image">
+                <div class="product-image-container">
+                    <img src="images/furniture4.jpg" alt="Product Image" class="product-image" onclick="toggleDropdown(this)">
+                    <div class="image-dropdown">
+                        <div class="image-navigation">
+                            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+                            <img id="galleryImage" src="images/furniture4.jpg" alt="Gallery Image">
+                            <button class="next" onclick="changeImage(1)">&#10095;</button>
+                        </div>
+                        <div id="description" class="description">
+                            <p>Description for furniture set 4.</p>
+                        </div>
+                    </div>
+                </div>
                 <p class="product-price"><strong>KES 10,709</strong></p>
                 <div class="product-actions">
-                    <div>
-                        <i class="fas fa-cart-plus"></i>
+                    <div class="product-actions-button">
+                        <button class="fas fa-cart-plus" onclick="addToCart()"></button>
                         <p>Cart</p>
                     </div>
                     <div>
-                        <i class="fas fa-bolt"></i>
+                        <i class="fas fa-bolt" onclick="buyNow()"></i>
                         <p>Buy Now</p>
                     </div>
                     <div>
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart" onclick="addToWishlist()"></i>
                         <p>Wishlist</p>
                     </div>
                 </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/index.js"></script>
             </div>
             <div class="product-item">
                 <div class="profile">
                     <img src="images/profile1.png" alt="User Profile">
                     <div>
-                        <p><strong>Mark Kamau</strong></p>
-                        <p>furhiture set 1</p>
+                        <p><strong>harry</strong></p>
+                        <p>furhiture </p>
                     </div>
                 </div>
                
@@ -106,8 +124,8 @@
                     <div>
                         <i class="fas fa-cart-plus"></i>
                         <p>Cart</p>
-                    </div>
-                    <div>
+                    </div class = product-actions >
+                    <div >
                         <i class="fas fa-bolt"></i>
                         <p>Buy Now</p>
                     </div>
@@ -254,6 +272,11 @@
     <footer>
         <p>&copy; 2024 Oda Pap. All Rights Reserved.</p>
     </footer>
+    <button class="floating-button" onclick="location.href='listing.html'">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
