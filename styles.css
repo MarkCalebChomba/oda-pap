@@ -24,7 +24,7 @@ header {
 }
 
 .logo {
-    height: 30px;
+    height: 50px;
 }
 
 .logo-text {
@@ -354,7 +354,7 @@ footer {
 .menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end; /* Align items to the right */
     position: relative; /* Add this to create a positioning context for the dropdown */
     margin: 20px;
 }
@@ -389,8 +389,7 @@ footer {
     border-radius: 10px;
     position: absolute; /* Position the dropdown absolutely */
     top: 50px; /* Adjust this value as needed */
-    left: 0;
-    right: 0;
+    right: 0; /* Align to the right */
     z-index: 1000; /* Ensure the dropdown is above other content */
 }
 
@@ -424,4 +423,69 @@ footer {
     font-size: 14px;
     margin: 0;
     color: #333;
+}
+.search-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+.suggestions {
+    display: none;
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestion-item:hover {
+    background-color: #f9f9f9;
 }

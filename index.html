@@ -15,86 +15,99 @@
                 <img src="images/logo.png" alt="Oda Pap Logo" class="logo">
                 <span class="logo-text">Oda Pap</span>
             </div>
-            <div class="top-icons">
-                <button class="home-button" onclick="location.href='index.html'">Home</button>
-                <i class="fas fa-search" id="search-icon"></i>
-                <div class="menu">
-                    <div class="menu-icon" onclick="toggleMenu()">
-                        <i class="fas fa-bars"></i>
-                        <p>Menu</p>
-                    </div>
-                    <div class="dropdown-content" id="dropdown">
-                        <a href="student-centre.html" class="category">
-                            <i class="fas fa-graduation-cap"></i>
-                            <p>Student Centre</p>
-                        </a>
-                        <a href="electronics.html" class="category">
-                            <i class="fas fa-tv"></i>
-                            <p>Electronics</p>
-                        </a>
-                        <a href="kitchenware.html" class="category">
-                            <i class="fas fa-blender"></i>
-                            <p>Kitchenware</p>
-                        </a>
-                        <a href="furniture.html" class="category">
-                            <i class="fas fa-couch"></i>
-                            <p>Furniture</p>
-                        </a>
-                        <a href="fashion.html" class="category">
-                            <i class="fas fa-tshirt"></i>
-                            <p>Fashion</p>
-                        </a>
-                        <a href="beauty.html" class="category">
-                            <i class="fas fa-heart"></i>
-                            <p>Beauty</p>
-                        </a>
-                        <a href="rentals.html" class="category">
-                            <i class="fas fa-building"></i>
-                            <p>Rentals</p>
-                        </a>
-                        <a href="service-men.html" class="category">
-                            <i class="fas fa-tools"></i>
-                            <p>Service Men</p>
-                        </a>
-                        <a href="foodstuffs.html" class="category">
-                            <i class="fas fa-carrot"></i>
-                            <p>Foodstuffs</p>
-                        </a>
-                        <a href="phones.html" class="category">
-                            <i class="fas fa-mobile-alt"></i>
-                            <p>Phones</p>
-                        </a>
-                        <a href="accessories.html" class="category">
-                            <i class="fas fa-headphones"></i>
-                            <p>Accessories</p>
-                        </a>
-                        <a href="pharmaceutical.html" class="category">
-                            <i class="fas fa-pills"></i>
-                            <p>Pharmaceutical</p>
-                        </a>
-                        <a href="kids.html" class="category">
-                            <i class="fas fa-hat-wizard"></i>
-                            <p>kids</p>
-                        </a>
-                    </div>
+            
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div id="searchSuggestions" class="suggestions">
+                    <!-- Suggestions will be dynamically populated here -->
                 </div>
-            
-                <script>
-                    function toggleMenu() {
-                        var dropdown = document.getElementById('dropdown');
-                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                    }
-            
-                    // Close the dropdown if clicked outside
-                    window.onclick = function(event) {
-                        if (!event.target.matches('.menu-icon') && !event.target.matches('.menu-icon *')) {
+            </div>
+
+            <div class="top-icons">
+               
+               
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                    <p>Menu</p>
+                </div>
+                <div class="dropdown-content" id="dropdown">
+                    <a href="student-centre.html" class="category">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>Student Centre</p>
+                    </a>
+                    <a href="electronics.html" class="category">
+                        <i class="fas fa-tv"></i>
+                        <p>Electronics</p>
+                    </a>
+                    <a href="kitchenware.html" class="category">
+                        <i class="fas fa-blender"></i>
+                        <p>Kitchenware</p>
+                    </a>
+                    <a href="furniture.html" class="category">
+                        <i class="fas fa-couch"></i>
+                        <p>Furniture</p>
+                    </a>
+                    <a href="fashion.html" class="category">
+                        <i class="fas fa-tshirt"></i>
+                        <p>Fashion</p>
+                    </a>
+                    <a href="beauty.html" class="category">
+                        <i class="fas fa-heart"></i>
+                        <p>Beauty</p>
+                    </a>
+                    <a href="rentals.html" class="category">
+                        <i class="fas fa-building"></i>
+                        <p>Rentals</p>
+                    </a>
+                    <a href="service-men.html" class="category">
+                        <i class="fas fa-tools"></i>
+                        <p>Service Men</p>
+                    </a>
+                    <a href="foodstuffs.html" class="category">
+                        <i class="fas fa-carrot"></i>
+                        <p>Foodstuffs</p>
+                    </a>
+                    <a href="phones.html" class="category">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Phones</p>
+                    </a>
+                    <a href="accessories.html" class="category">
+                        <i class="fas fa-headphones"></i>
+                        <p>Accessories</p>
+                    </a>
+                    <a href="pharmaceutical.html" class="category">
+                        <i class="fas fa-pills"></i>
+                        <p>Pharmaceutical</p>
+                    </a>
+                    <a href="kids.html" class="category">
+                        <i class="fas fa-hat-wizard"></i>
+                        <p>kids</p>
+                    </a>
+                </div>
+                
+               
+                
+                    <script>
+                        function toggleMenu() {
                             var dropdown = document.getElementById('dropdown');
-                            if (dropdown.style.display === 'block') {
-                                dropdown.style.display = 'none';
+                            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                        }
+                
+                        // Close the dropdown if clicked outside
+                        window.onclick = function(event) {
+                            if (!event.target.matches('.menu-icon') && !event.target.matches('.menu-icon *')) {
+                                var dropdown = document.getElementById('dropdown');
+                                if (dropdown.style.display === 'block') {
+                                    dropdown.style.display = 'none';
+                                }
                             }
                         }
-                    }
-                </script>
+                    </script>
+                </div>
+            </div>
             </div>
         </div>
         <div class="border-line"></div>
@@ -110,6 +123,7 @@
             
         </div>
     </header>
+
 
     <main>
         
