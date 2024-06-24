@@ -321,7 +321,7 @@ footer {
     box-shadow: 0 4px 8px rgba(235, 232, 55, 0.1);
 }
 
-.category {
+.box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -335,18 +335,18 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.category:hover {
+.box :hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.category i {
+.box i {
     font-size: 24px;
     color: #ff5722;
     margin-bottom: 10px;
 }
 
-.category p {
+.box p {
     font-size: 14px;
     margin: 0;
     color: #333;
