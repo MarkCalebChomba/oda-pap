@@ -15,8 +15,17 @@
                 <img src="images/logo.png" alt="Oda Pap Logo" class="logo">
                 <span class="logo-text">Oda Pap</span>
             </div>
-            
-           
+
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div id="searchSuggestions" class="suggestions">
+                    <!-- Suggestions will be dynamically populated here -->
+                </div>
+            </div>
+
             <div class="top-icons">
                
                
@@ -104,9 +113,7 @@
         <div class="border-line"></div>
         <div class="nav-bar" id="nav-bar">
             <button class="home-button" onclick="location.href='index.html'"><i class="fas fa-home"></i></button>
-            <button class="home-button" onclick="location.href='electronics.html'"><i class="fas fa-laptop"></i></button>
-            <button class="home-button" onclick="location.href='fashion.html'"><i class="fas fa-tshirt"></i></button>
-            <button class="home-button" onclick="location.href='furniture.html'"><i class="fas fa-couch"></i></button>
+            
             <button class="home-button" onclick="location.href='notification.html'"> <i class="fas fa-bell" id="notification-icon"></i></button>
             <button class="home-button" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart" id="cart-icon"></i></button>
             <button class="home-button" onclick="location.href='profile.html'"><i class="fas fa-user-circle"></i></button>
@@ -197,13 +204,39 @@
       
 
         
-        
+        <section class="gallery">
             <div class="product-item">
                 <div class="profile">
                     <img src="images/profile1.png" alt="User Profile">
                     <div>
-                        <p><strong>harry</strong></p>
-                        <p>furhiture </p>
+                        <p><strong>Ezra Fred</strong></p>
+                        <p>furniture set 4</p>
+                    </div>
+                </div>
+               
+                <img src="images/furniture4.jpg" alt="Product Image">
+                <p class="product-price"><strong>KES 10,709</strong></p>
+                <div class="product-actions">
+                    <div>
+                        <i class="fas fa-cart-plus"></i>
+                        <p>Cart</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-bolt"></i>
+                        <p>Buy Now</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-heart"></i>
+                        <p>Wishlist</p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="profile">
+                    <img src="images/profile1.png" alt="User Profile">
+                    <div>
+                        <p><strong>Mark Kamau</strong></p>
+                        <p>furhiture set 1</p>
                     </div>
                 </div>
                
@@ -213,8 +246,8 @@
                     <div>
                         <i class="fas fa-cart-plus"></i>
                         <p>Cart</p>
-                    </div class = product-actions >
-                    <div >
+                    </div>
+                    <div>
                         <i class="fas fa-bolt"></i>
                         <p>Buy Now</p>
                     </div>
